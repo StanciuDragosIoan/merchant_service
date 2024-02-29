@@ -20,6 +20,7 @@ services:
       tty: true 
       ports:
       - "80:8081"
+      - "5000:5000"
       build: .
       volumes:
       - type: bind
