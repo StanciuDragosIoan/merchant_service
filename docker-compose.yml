@@ -1,0 +1,35 @@
+version: "3.8"
+
+services:
+  pgdev:
+    image: postgres
+    container_name: pgdev
+    environment:
+      POSTGRES_PASSWORD: pg_pass
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+
+  app:
+      environment: 
+      - appUrl=${APP_URL}
+      stdin_open: true # docker run -i
+      command: sh -c "npm run dev"
+      env_file: .env
+      tty: true 
+      ports:
+      - "80:8081"
+      build: .
+      volumes:
+      - type: bind
+        source: ./app
+        target: /app/app
+
+
+volumes: 
+  app:
+   
+
+    
+   
