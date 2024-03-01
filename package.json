@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "build": "vite build && vite build --ssr",
-    "dev": "shopify app dev --tunnel-url=https://846e-136-255-64-85.ngrok-free.app:5000/ngrok-skip-browser-warning:latest",
+    "dev": "shopify app dev",
     "config:link": "shopify app config link",
     "generate": "shopify app generate",
     "deploy": "shopify app deploy",

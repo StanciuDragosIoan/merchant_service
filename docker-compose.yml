@@ -24,8 +24,8 @@ services:
       build: .
       volumes:
       - type: bind
-        source: ./app
-        target: /app/app
+        source: ./app/
+        target: /app/app/
 
 
 volumes: 
